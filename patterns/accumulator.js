@@ -47,7 +47,19 @@ export function factorial(n) {
  * @returns `[]` if n is 0 or negative
  */
 export function buildNArray(n) {
-  // TODO
+  //check if its a number
+  if (typeof n != "number") return null;
+
+  //check for negative number
+  if (n <= 0) {
+    return [];
+  }
+  //build array
+  const result = [];
+  for (let i = 1; i <= n; i++) {
+    result.push(i);
+  }
+  return result;
 }
 
 /**
