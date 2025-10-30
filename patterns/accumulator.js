@@ -67,7 +67,15 @@ export function buildNArray(n) {
  * @returns {string} the longest string in `strings`
  */
 export function getLongestString(strings) {
-  // TODO
+  //empty array lenght is 0
+  if (strings.length === 0) return "";
+  let longestString = "";
+  for (let i = 0; i < strings.length; i++) {
+    if (strings[i].length > longestString.length) {
+      longestString = strings[i];
+    }
+  }
+  return longestString;
 }
 
 /**
