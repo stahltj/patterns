@@ -1,3 +1,5 @@
+import { a } from "vitest/dist/chunks/suite.BJU7kdY9.js";
+
 /**
  * You can assume that `n` is an integer.
  * @param {number} n
@@ -104,5 +106,19 @@ export function countPresent(attendance) {
  * @returns `null` if `dna` is not a string
  */
 export function complementDNA(dna) {
-  // TODO
+  if (typeof dna !== "string") return null;
+  complementDNA = "";
+  for (let i = 0; i < dna.length; i++) {
+    const nucleobase = dna[i];
+    if (nucleobase === "A".toUpperCase()) {
+      complementDNA += "T";
+    } else if (nucleobase === "T".toUpperCase()) {
+      complementDNA += "A";
+    } else if (nucleobase === "C".toUpperCase()) {
+      complementDNA += "G";
+    } else if (nucleobase === "G".toUpperCase()) {
+      complementDNA += "C";
+    }
+  }
+  return complementDNA;
 }
